@@ -88,10 +88,13 @@ transform: scale(0.9);
 img{
   width:100%;
   border-radius:5px;
-  
 }
 img:hover{
 border: 5px solid brown;
+}
+.dev{
+  width: 90%;
+  margin: 0 auto;
 }
 .delete{
   font-size: 30px;
@@ -316,6 +319,7 @@ width: 30px;
 .confirm{
   padding-right:110px;
   padding-left:110px;
+  white-space: nowrap;
   width: 100%;
   padding-top:20px;
   padding-bottom:20px;
