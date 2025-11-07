@@ -324,7 +324,7 @@ document.querySelector('.hi').innerHTML = `
 
 //document.querySelector('.quantity').innerHTML=rest
 
-
+/*
 document.querySelector('.confirm').addEventListener('click', ()=>{
   let added = 0
   let showAll =""
@@ -399,6 +399,70 @@ toast.classList.add("toast")
  
 
 })
+*/
+document.querySelector('.confirm').addEventListener('click', () => {
+  let added = 0;
+  let showAll = "";
+
+  document.querySelector('.dev').style.backgroundColor = 'rgba(211, 200, 200, 0.9)';
+  document.querySelector('.dev').style.opacity = 0.5;
+
+  const toast = document.querySelector('.toas');
+  toast.style.display = "block";
+
+  // Scrollable content container
+  showAll += `
+    <div class='toast-content' style="max-height: 300px; overflow-y: auto; padding-right: 10px;">
+      <div class='odd'>
+        <img src='images/icon-order-confirmed.svg' class='svg'>
+        <h2>Order Confirmed</h2>
+        <span class='enjoy'>We hope you enjoy your meal</span>
+      </div>
+  `;
+
+  myArray.forEach(pop => {
+    let price = pop.price.replace('$', '');
+    let kept = (price * pop.quantity).toFixed(2);
+    added += parseFloat(kept);
+
+    showAll += `
+      <div class="last">
+        <div class="us">
+          <picture>
+            <source media="(min-width: 1024px)" srcset="${pop.image.desktop}">
+            <source media="(min-width: 768px)" srcset="${pop.image.tablet}">
+            <img src="${pop.image.mobile}" alt="image">
+          </picture>
+        </div>
+        <div class='low'>
+          <div class="hu">
+            <span class="hop">${pop.name}</span>
+            <div class="mu">
+              <div class="son">
+                <span class="g">${pop.quantity}</span>
+                <img src="images/icon-remove-item.svg" class="it">
+              </div>
+              <span class="no">${pop.price}</span>
+            </div>
+          </div>
+          <p class="kept">$${kept}</p>
+        </div>
+      </div>
+      <hr>
+    `;
+  });
+
+  showAll += `</div>`; // end of scrollable container
+
+  // Fixed button container
+  showAll += `
+    <div class='toast-footer' style="text-align:center; margin-top:10px;">
+      <button class='new-order' onclick="nail()">Start a new order</button>
+    </div>
+  `;
+
+  toast.innerHTML = showAll;
+});
 
 
 document.querySelectorAll('.delete').forEach((deletes, index)=>{

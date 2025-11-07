@@ -486,7 +486,9 @@ padding-bottom: 80px;
   z-index: 999;
 
 }
-*/
+
+
+
 .toas{
   position: fixed;
   top: 50%;
@@ -494,15 +496,83 @@ padding-bottom: 80px;
   transform: translate(-50%, -50%);
   width: 90%;
   max-width: 400px;
-  max-height: 90vh;    /* ✅ This is the key */
+  max-height: 90vh;   
   background: white;
   border-radius: 10px;
   padding: 20px;
   border: 1px solid #ddd;
   display: none;
-  overflow-y: auto;    /* ✅ Allow vertical scroll inside */
+  overflow-y: auto;   
   z-index: 1000;
 }
+*/
+/* Toast container */
+.toas {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 95%;           /* wider for mobile */
+  max-width: 600px;     /* larger screens */
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.25);
+  position: fixed;
+  z-index: 999;
+  display: none;        /* hidden by default */
+  padding: 20px;        /* spacing inside toast */
+  overflow: hidden;     /* hides overflow of container */
+  box-sizing: border-box;
+}
+
+/* Scrollable content inside toast */
+.toast-content {
+  max-height: 70vh;     /* scrollable area max height (70% of viewport height) */
+  overflow-y: auto;
+  padding-right: 10px;  /* prevent scrollbar overlap */
+}
+
+/* Optional: make scrollbar thinner */
+.toast-content::-webkit-scrollbar {
+  width: 6px;
+}
+
+.toast-content::-webkit-scrollbar-thumb {
+  background-color: rgba(0,0,0,0.2);
+  border-radius: 3px;
+}
+
+/* Footer with fixed button */
+
+.toast-footer {
+  text-align: center;
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid #eee;
+  position: sticky;
+  bottom: 0;
+  background-color: #fff;
+}
+
+
+/* New order button */
+.toast-footer .new-order {
+  background-color: brown;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 25px;
+  font-size: clamp(14px, 1.2vw, 16px);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.toast-footer .new-order:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+/* Responsive adjustments for small screens */
 
 
 @media (min-width:765px){
@@ -512,6 +582,13 @@ padding-bottom: 80px;
    padding: 0px 30px;
    margin-bottom: 20px;
   }
+  .toas {
+    width: 95%;
+    padding: 15px;
+  }
+  .toast-footer .new-order {
+    width: 100%;
+  }
   .enjoy{
   font-size: 30px;
   color: rgb(122, 119, 119);
@@ -520,24 +597,7 @@ padding-bottom: 80px;
 .stro{
   font-size: 25px;
 }
-  .toas{
-  left: 50%;
- top: 50%;
 
- z-index:1000;
-  width: 90%;          /* takes up to 90% of mobile width */
-  max-width: 400px; 
-  opacity:2;
-  background-color: #fff;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.2);
-  display: none;
-  position:fixed;
-  transform: translate(-50%, -50%);
-  padding: 10px 10px;
-
-}
   .display{
   display: grid;
   grid-template-columns: 1fr 1fr ;
