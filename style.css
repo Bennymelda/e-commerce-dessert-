@@ -26,7 +26,7 @@ body{
   opacity: 0.9;
 }
 .stro{
-  font-size: 25px;
+  font-size: 22px;
 }
 
 
@@ -172,7 +172,7 @@ border: 5px solid brown;
 .price{
   color:brown;
   font-weight: bold;
-  font-size: 30px;
+  font-size: 22px;
 }
 .little{
   color: grey;
@@ -209,7 +209,7 @@ border: 5px solid brown;
   margin: 0 auto;
   height: 80%;
 margin-right: 0px;
-margin-bottom: 20px;
+
   padding-bottom: 50px;
   padding-left:  10px;
   padding-right: 10px;
@@ -272,7 +272,8 @@ opacity: 0.5;
   font-weight:bold;
 }
 .is{
-  font-size: 18px;
+  font-size: 16px;
+  white-space: nowrap;
 }
 .neutral{
   display: flex;
@@ -335,11 +336,12 @@ width: 30px;
  
 }
 h2{
-  font-size: 50px;
+  font-size: 30px;
   margin-bottom: 10px;
+  white-space: nowrap;
 }
 .enjoy{
-  font-size: 30px;
+  font-size: 20px;
   color: rgb(122, 119, 119);
   margin-bottom: 50px;
 }
@@ -369,6 +371,7 @@ hr{
   position: relative;
   
   padding-top: 10px;
+ 
   background-color: rgb(247, 241, 230);
 }
 
@@ -390,24 +393,24 @@ hr{
 }
 .g{
   color:brown;
-  font-size: 25px;
+  font-size: 22px;
   font-weight: bold;
 }
 .kept{
   margin-left:0px;
-  font-size: 25px;
+  font-size: 22px;
   padding: 0px;
 }
 .no{
   opacity:0.6;
-  font-size: 24px;
+  font-size: 22px;
 }
 .this{
   display: flex;
   justify-content: space-between;
   flex-direction: row;
   padding: 0px 10px;
-  
+  margin-bottom: 20px;
    background-color: rgb(247, 241, 230);
 }
 .mod{
@@ -415,7 +418,7 @@ hr{
   margin-top: 50px;
 }
 .hm{
-  font-size: 40px;
+  font-size: 30px;
   font-weight: bold;
 }
 .new-order{
@@ -443,6 +446,7 @@ hr{
 .gone{
   margin-bottom: 18px;
   width: 100%;
+ 
   margin: 0 auto;
   position: relative;
   text-align: center;
@@ -489,6 +493,14 @@ padding-bottom: 80px;
    padding: 0px 30px;
    margin-bottom: 20px;
   }
+  .enjoy{
+  font-size: 30px;
+  color: rgb(122, 119, 119);
+  margin-bottom: 50px;
+}
+.stro{
+  font-size: 25px;
+}
   .toas{
   left: 50%;
  top: 50%;
@@ -516,7 +528,16 @@ padding-bottom: 80px;
   z-index:10;
   margin-left: 0px;
 }
-
+.g{
+  color:brown;
+  font-size: 25px;
+  font-weight: bold;
+}
+h2{
+  font-size: 50px;
+  margin-bottom: 10px;
+  white-space: nowrap;
+}
 }
 
 @media (min-width:1024px){
@@ -526,6 +547,21 @@ padding-bottom: 80px;
    padding: 0px 30px;
    margin-bottom: 20px;
   }
+  .g{
+  color:brown;
+  font-size: 25px;
+  font-weight: bold;
+}
+.kept{
+  margin-left:0px;
+  font-size: 25px;
+  padding: 0px;
+}
+  h2{
+  font-size: 40px;
+  margin-bottom: 10px;
+  white-space: nowrap;
+}
   .toas{
  
   top: 50%;
@@ -554,6 +590,15 @@ padding-bottom: 80px;
   z-index:10;
   
 }
+.price{
+  color:brown;
+  font-weight: bold;
+  font-size: 22px;
+}
+.hm{
+  font-size: 40px;
+  font-weight: bold;
+}
 .bug {
   position: absolute;
   bottom: 0px;           /* from bottom instead of top */
@@ -573,27 +618,7 @@ padding-bottom: 80px;
   cursor: pointer;
   transition: all 0.4s ease;
 }
-  /*
-.bug{
-  position:absolute;
-  top:-27px;
-  padding: 15px 0px;
-  padding-left:50px;
-  padding-right:50px;
-   text-align: center;
-  justify-content: center;
-  border: 1px solid brown ;
-  border-radius:30px;
-  background-color: white;
-  font-weight: bold;
-  left:70px;
-  font-size: 18px;
-  cursor: pointer;
-  transition: background-color 0.9s ease,
-  transform 0.9s,
-  opacity 0.4s ease;
-}
-  */
+ 
 .mole{
   background-color: #ffff;
   border-radius:10px;
@@ -614,6 +639,11 @@ h1{
 .pics{
   width: 70%;
   margin: 0 auto;
+}
+.g{
+  color:brown;
+  font-size: 25px;
+  font-weight: bold;
 }
 img{
   width:100%;
@@ -639,9 +669,14 @@ transition: transform 0.3s ease;
   transform 0.9s,
   opacity 0.4s ease;
 }
-
+.stro{
+  font-size: 25px;
+}
   
-
+.hm{
+  font-size: 40px;
+  font-weight: bold;
+}
 .new-order{
   
  background-color:brown;
@@ -661,8 +696,16 @@ transition: transform 0.3s ease;
   transition: background-color 0.9s ease,
   transform 0.9s,
   opacity 0.4s ease;
-
-  
+}
+.g{
+  color:brown;
+  font-size: 25px;
+  font-weight: bold;
+}
+.kept{
+  margin-left:0px;
+  font-size: 25px;
+  padding: 0px;
 }
 .gone{
   margin-bottom: 18px;
@@ -676,5 +719,14 @@ background-color: #fff;
 padding-bottom: 50px;
   
 }
-
+.enjoy{
+  font-size: 30px;
+  color: rgb(122, 119, 119);
+  margin-bottom: 50px;
+}
+.price{
+  color:brown;
+  font-weight: bold;
+  font-size: 22px;
+}
 }

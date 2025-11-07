@@ -289,23 +289,7 @@ added += kept
   `
 })
 document.querySelector('.quan').innerHTML=rest
-/*
-document.querySelector('.hi').innerHTML=`
 
-<div class="increase">
-<p class="tot">Order Total:</p>
-<p class="order">$${added.toFixed(2)}</p>
-</div>
-<div class='neutral'>
-<img src='images/icon-carbon-neutral.svg' class='vg'>
-<p class='is'>This is <strong>carbon-neutral</strong> deliver
-</div>
-<div class="box">
-<button class="confirm">Confirm order</button>
-</div>
-
-`
-*/
 // ✅ If cart becomes empty, show empty state again and remove Confirm Order
 if (myArray.length === 0) {
   document.querySelector('.quan').innerHTML = '';
