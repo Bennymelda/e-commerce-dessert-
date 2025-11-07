@@ -466,12 +466,12 @@ padding-bottom: 80px;
   z-index:10;
   margin-left: 0px;
 }
+/*
 .toas{
   left: 50%;
  top: 50%;
-
  z-index:1000;
-  width: 90%;          /* takes up to 90% of mobile width */
+  width: 90%;         
   max-width: 400px; 
   opacity:2;
   background-color: #fff;
@@ -485,6 +485,23 @@ padding-bottom: 80px;
   padding: 10px 10px;
   z-index: 999;
 
+}
+*/
+.toas{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  max-width: 400px;
+  max-height: 90vh;    /* ✅ This is the key */
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  display: none;
+  overflow-y: auto;    /* ✅ Allow vertical scroll inside */
+  z-index: 1000;
 }
 
 
