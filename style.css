@@ -507,22 +507,54 @@ padding-bottom: 80px;
 }
 */
 /* Toast container */
+/*
 .toas {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  width: 95%;           /* wider for mobile */
-  max-width: 600px;     /* larger screens */
+  width: 95%;         
+  max-width: 600px;     
   background-color: #fff;
   border: 1px solid #ddd;
   border-radius: 12px;
   box-shadow: 0 0 15px rgba(0,0,0,0.25);
   position: fixed;
   z-index: 999;
-  display: none;        /* hidden by default */
-  padding: 20px;        /* spacing inside toast */
-  overflow: hidden;     /* hides overflow of container */
+  display: none;        
+  padding: 20px;       
+  overflow: hidden;    
   box-sizing: border-box;
+}
+*/
+.toas {
+  left: 50%;
+  top: 50%;
+  width: 90%;
+  max-width: 600px;
+  max-height: 90vh;      /* ensure it doesn't overflow the viewport */
+  overflow-y: auto;      /* make it scrollable if content is taller */
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  display: none;
+  position: fixed;
+  transform: translate(-50%, -50%);
+  padding: 20px;          /* add some spacing inside */
+  z-index: 999;
+}
+
+/* Make the button inside toast fully visible and responsive */
+.toas .new-order {
+  width: 80%;            /* take full width */
+       /* optional limit */
+  padding: 20px 0;        /* vertical padding for touch */
+  font-size: clamp(16px, 1.2vw, 18px);
+  margin:  auto 0;    /* center it and add top spacing */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 /* Scrollable content inside toast */
