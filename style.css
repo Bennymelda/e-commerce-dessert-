@@ -336,12 +336,12 @@ width: 30px;
  
 }
 h2{
-  font-size: 30px;
+  font-size: 25px;
   margin-bottom: 10px;
   white-space: nowrap;
 }
 .enjoy{
-  font-size: 20px;
+  font-size: 18px;
   color: rgb(122, 119, 119);
   margin-bottom: 50px;
 }
@@ -480,8 +480,10 @@ padding-bottom: 80px;
   box-shadow: 0 0 10px rgba(0,0,0,0.2);
   display: none;
   position:fixed;
+  overflow-y: auto;
   transform: translate(-50%, -50%);
   padding: 10px 10px;
+  z-index: 999;
 
 }
 
